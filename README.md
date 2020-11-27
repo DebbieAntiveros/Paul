@@ -1,4 +1,2 @@
-#  Deb! 
-
-
-# Laaab tika! 
+ 
+ 
