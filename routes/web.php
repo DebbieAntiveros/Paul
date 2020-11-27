@@ -13,20 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
-Route::get('/items','ItemController@index')->name('items.index')->middleware('auth');
-Route::get('/items/create','ItemController@create')->name('items.create');
-Route::post('/items','ItemController@store')->name('items.store');
-Route::get('/items/{id}','ItemController@show')->name('items.show')->middleware('auth');
-Route::delete('/items/{id}','ItemController@destroy')-> name('items.destroy')->middleware('auth');
+Route::resource('items', 'ItemController');
 
 Auth::routes([
 
     'register' => true
 ]);
 
-Route::get('/home', 'HomeController@index')->name('home');

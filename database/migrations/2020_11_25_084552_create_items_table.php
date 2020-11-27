@@ -19,7 +19,6 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->string('color');
-            $table->json('freebies');
         });
     }
 

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -21,6 +21,6 @@
                 Inventory Management System
                 </div>
                 <p class="msg"> {{session ('msg')}}</p>
-                <a href="{{ route ('items.create')}}">Order </a>
+                <a href="{{ route ('items.create')}}"> Product </a>
             </div>
         </div>
